@@ -14,6 +14,8 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.amati.vote4best.data.model.AuthState
 import com.amati.vote4best.ui.screens.HomeScreen
 import com.amati.vote4best.ui.screens.LoginScreen
@@ -25,8 +27,9 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
 
-        val authViewModel = AuthViewModel()
+
         setContent {
+            val authViewModel: AuthViewModel = viewModel()
             val authState by authViewModel.authState.collectAsState()
 
             when(authState){
@@ -36,11 +39,16 @@ class MainActivity : ComponentActivity() {
                 is AuthState.Guest ->{
                     LoginScreen(authViewModel)
                 }
-                else -> {
-                    Box(modifier = Modifier.fillMaxSize(),
-                        contentAlignment = Alignment.Center){
+                is AuthState.Loading -> {
+                    Box(
+                        modifier = Modifier.fillMaxSize(),
+                        contentAlignment = Alignment.Center
+                    ) {
                         CircularProgressIndicator()
                     }
+                }
+                is AuthState.Error -> {
+                    LoginScreen(authViewModel)
                 }
             }
         }
