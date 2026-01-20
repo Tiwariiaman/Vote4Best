@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1094726441516",
+    "project_id": "vote4best-90965",
+    "storage_bucket": "vote4best-90965.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1094726441516:android:beb54153166fb4555a0f89",
+        "android_client_info": {
+          "package_name": "com.amati.vote4best"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJypkHlGhovpQJ7E-fTLqbhyo3F6xLzYg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
