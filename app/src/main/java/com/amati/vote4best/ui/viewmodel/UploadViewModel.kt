@@ -3,6 +3,7 @@ package com.amati.vote4best.ui.viewmodel
 import android.net.Uri
 import androidx.lifecycle.ViewModel
 import com.amati.vote4best.data.model.Place
+import com.amati.vote4best.data.model.Places
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
@@ -34,7 +35,7 @@ class UploadViewModel : ViewModel() {
                 fileRef.downloadUrl
             }
             .addOnSuccessListener { downloadUrl ->
-                val place = Place(
+                val place = Places(
                     imageUrl = downloadUrl.toString(),
                     city = city,
                     latitude = latitude,
