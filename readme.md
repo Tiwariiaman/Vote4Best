@@ -30,6 +30,11 @@ This project is built using **Kotlin, Jetpack Compose, Firebase, and MVVM archit
 - Home Screen with Bottom Navigation
   - 📸 Upload Place
   - 🗺️ View Places (Voting)
+ 
+ <p align="center">
+  <img src="ss1.jpeg" width="200"/>
+  <img src="ss3.jpeg" width="200"/>
+</p
 
 ---
 
