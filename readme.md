@@ -34,6 +34,8 @@ This project is built using **Kotlin, Jetpack Compose, Firebase, and MVVM archit
  <p align="center">
   <img src="post5.2.jpeg" width="200"/>
   <img src="post5.3.jpeg" width="200"/>
+    <img src="post7.2.jpeg" width="200"/>
+  <img src="post7.3.jpeg" width="200"/>
 </p
 
 ---
